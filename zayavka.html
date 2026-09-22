@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пример заявки — ТверьКамень</title>
+  <meta name="robots" content="noindex">
+  <style>
+    :root {
+      --graphite: #2D3748;
+      --graphite-soft: #68758C;
+      --border: #E2E8F0;
+      --accent: #E5533C;
+      --white: #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #F7F8FA;
+      color: var(--graphite);
+      font-family: Arial, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 28px 28px 16px;
+    }
+    h1 { font-size: 26px; margin: 0 0 6px; line-height: 1.3; }
+    .updated { color: var(--graphite-soft); font-size: 14px; margin: 0 0 24px; }
+    h2 { font-size: 18px; margin: 28px 0 8px; }
+    p, li { font-size: 15px; }
+    ul { padding-left: 22px; margin: 8px 0; }
+    a { color: var(--accent); }
+    .back { display: inline-block; margin-top: 24px; font-size: 14px; }
+
+    .demo-badge {
+      display: inline-block;
+      background: #FDECEA;
+      color: #C13C28;
+      border: 1px solid var(--accent);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 3px 8px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .mail {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 12px 0 8px;
+    }
+    .mail__head {
+      background: #FAFBFC;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 16px;
+      font-size: 14px;
+    }
+    .mail__head p { margin: 2px 0; }
+    .mail__head .subject { font-weight: bold; color: var(--graphite); font-size: 15px; }
+    .mail__head .muted { color: var(--graphite-soft); font-size: 13px; }
+    .mail__body { padding: 16px; }
+    .mail__body h3 { margin: 0 0 12px; font-size: 16px; }
+    table { border-collapse: collapse; width: 100%; margin: 0 0 12px; font-size: 14px; }
+    th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #FAFBFC; width: 40%; color: var(--graphite-soft); font-weight: normal; }
+    .mail__note { font-size: 13px; color: var(--graphite-soft); margin: 0; }
+    .hint {
+      background: #F7F8FA;
+      border-left: 3px solid var(--accent);
+      padding: 10px 14px;
+      font-size: 14px;
+      margin: 16px 0;
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 22px; }
+      .card { padding: 20px 16px 12px; }
+      th, td { display: block; width: 100%; }
+      th { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <span class="demo-badge">Пример · демо-режим</span>
+      <h1>Как выглядит заявка у менеджера</h1>
+      <p class="updated">Ниже — пример уведомления, которое менеджер получает после отправки формы на сайте «ТверьКамень». Сайт-демо (GitHub Pages) заявки никуда не отправляет: страница показана только для демонстрации.</p>
+
+      <div class="mail">
+        <div class="mail__head">
+          <p class="subject">[ТверьКамень] Новая заявка — Алексей Морозов</p>
+          <p class="muted">Кому: менеджеры завода · со страницы «ТверьКамень — тротуарная плитка»</p>
+        </div>
+        <div class="mail__body">
+          <h3>Новая заявка с сайта «ТверьКамень»</h3>
+          <table>
+            <tr><th>Имя</th><td>Алексей Морозов</td></tr>
+            <tr><th>Телефон</th><td>+7 (911) 123-45-67</td></tr>
+            <tr><th>Способ связи</th><td>WhatsApp</td></tr>
+            <tr><th>Контакт для связи</th><td>@alexey_m</td></tr>
+            <tr><th>Время заявки</th><td>22.09.2026, 14:30</td></tr>
+            <tr><th>Согласие на обработку ПДн</th><td>ДА (22.09.2026, 14:30)</td></tr>
+          </table>
+          <p class="mail__note">Ответьте клиенту выбранным способом связи в кратчайшие сроки.</p>
+        </div>
+      </div>
+
+      <div class="hint">Поле «Контакт для связи» зависит от выбора клиента: «Перезвонить» — только телефон, WhatsApp/Telegram — @username, «Электронная почта» — e-mail.</div>
+
+      <h2>Что получает менеджер на рабочем сайте</h2>
+      <ul>
+        <li>одно аккуратное письмо со всеми полями формы — как показано выше;</li>
+        <li>время заявки и факт согласия на обработку персональных данных (152-ФЗ);</li>
+        <li>способ связи, который выбрал клиент, — менеджер пишет/звонит именно так.</li>
+      </ul>
+      <p>На демо-версии (GitHub Pages) письмо не уходит — форма помечает приём как «демо». Реальная отправка включается при запуске на домене: достаточно почтового ящика менеджеров и одной настройки на хостинге (см. README, раздел «Запуск на реальном домене в России»).</p>
+
+      <p><a class="back" href="index.html">← Вернуться на главную</a></p>
+    </div>
+  </div>
+</body>
+</html>

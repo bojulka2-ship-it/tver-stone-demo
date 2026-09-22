@@ -9,6 +9,13 @@
     document.getElementById("year").textContent = String(new Date().getFullYear());
   }
 
+  if (window.IS_GITHUB_PAGES) {
+    var demoLink = document.getElementById("demoZayavkaLink");
+    if (demoLink) {
+      demoLink.hidden = false;
+    }
+  }
+
   var revealNodes = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
     var observer = new IntersectionObserver(
@@ -174,12 +181,13 @@
         form.reset();
         updateConditionalFields();
         clearTimeout(successTimer);
-        successBox.textContent =
-          "Ваша заявка принята (демо-режим: GitHub Pages не хранит заявки, серверный обработчик не подключён).";
+        successBox.innerHTML =
+          "Ваша заявка принята (демо-режим: GitHub Pages не хранит заявки, серверный обработчик не подключён). " +
+          '<a href="zayavka.html" style="color:#fff;text-decoration:underline">Посмотреть, как выглядит заявка у менеджера →</a>';
         successBox.hidden = false;
         successTimer = setTimeout(function () {
           successBox.hidden = true;
-        }, 8000);
+        }, 12000);
         submitBtn.disabled = false;
         submitBtn.textContent = "Рассчитать стоимость";
       }, 700);

@@ -877,6 +877,17 @@ input[type="range"]::-moz-range-track {
   text-decoration: none;
 }
 
+.footer__demo {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer__demo:hover {
+  color: var(--accent-dark);
+}
+
 /* ---------- Мобильная панель ---------- */
 
 .mobile-bar {
