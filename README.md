@@ -74,6 +74,20 @@
 | `screenshots/zayavka-desktop.png` | Демо-страница «Как выглядит заявка у менеджера» |
 | `screenshots/mail-letter-desktop.png` | Реальный HTML-шаблон письма менеджеру (из `buildMail`) |
 
+### Снимки
+
+**Главная страница (полный кадр):**
+
+[![Главная страница — полный снимок](screenshots/site-full-desktop.webp)](screenshots/site-full-desktop.webp)
+
+**Как выглядит заявка у менеджера:**
+
+[![Демо-страница «Как выглядит заявка у менеджера»](screenshots/zayavka-desktop.png)](screenshots/zayavka-desktop.png)
+
+**Письмо менеджеру (HTML-шаблон):**
+
+[![HTML-шаблон письма менеджеру](screenshots/mail-letter-desktop.png)](screenshots/mail-letter-desktop.png)
+
 > Скриншот письма воспроизводит точный HTML, который боевой обработчик (`/api/submit` или `send.php`) отправляет на почту менеджеров: имя, телефон, способ связи, время заявки, согласие на обработку ПДн.
 
 ## 4. Системные требования
