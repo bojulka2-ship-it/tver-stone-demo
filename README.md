@@ -70,12 +70,9 @@
 
 | Файл | Что на снимке |
 |---|---|
-| `screenshots/site-full-desktop.png` | Главная страница, полный кадр, 1440 px |
-| `screenshots/site-full-mobile.png` | Главная страница, полный кадр, 375 px |
-| `screenshots/zayavka-desktop.png` | Демо-страница «Как выглядит заявка у менеджера», 1440 px |
-| `screenshots/zayavka-mobile.png` | Демо-страница «Как выглядит заявка у менеджера», 375 px |
-| `screenshots/mail-letter-desktop.png` | Реальный HTML-шаблон письма менеджеру (из `buildMail`), 1440 px |
-| `screenshots/mail-letter-mobile.png` | Реальный HTML-шаблон письма менеджеру, 375 px |
+| `screenshots/site-full-desktop.webp` | Главная страница, полный кадр (WebP, сжат для публикации) |
+| `screenshots/zayavka-desktop.png` | Демо-страница «Как выглядит заявка у менеджера» |
+| `screenshots/mail-letter-desktop.png` | Реальный HTML-шаблон письма менеджеру (из `buildMail`) |
 
 > Скриншот письма воспроизводит точный HTML, который боевой обработчик (`/api/submit` или `send.php`) отправляет на почту менеджеров: имя, телефон, способ связи, время заявки, согласие на обработку ПДн.
 
